@@ -53,7 +53,10 @@ public class ZakupyAdapter
     public int getItemCount() {
         return produkty.size();
     }
-
+    public void dodajProdukt(Produkt aktualnyProdukt){
+        produkty.add(aktualnyProdukt);
+        notifyItemInserted(produkty.size()-1);
+    }
     public class ProduktViewHolder
             extends RecyclerView.ViewHolder{
         public ZakupyAdapter zakupyAdapter;
